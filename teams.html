@@ -1,0 +1,73 @@
+<html>
+    <head>
+        <title>2022 Team Data</title>
+        <link rel="stylesheet" type="text/css" href="test.css" />
+        <script type="text/javascript" src="https://d3js.org/d3.v4.min.js"></script>
+    </head>
+    <body>
+        <h1>
+            <a href="./index.html">2022 NASCAR Team Data</a>
+        </h1>
+
+        <ul>
+          <li><a href="./wins.html">WINS</a></li>
+          <li><a href="./playoffs.html">PLAYOFFS</a></li>
+          <li><a href="./teams.html">TEAMS</a></li>
+          <li><a href="./mans.html">MANUFACTURERS</a></li>
+        </ul>
+        <hr>
+        <div class="histogram">
+        <script>
+            var chartwidth = 1500;
+            var chartheight = 400;
+            var margin = 30;
+            var maxx = 19.5; 
+            var maxy = 8; 
+            // histogram example
+            var histogram_data = [[1,5],[2,3],[3,3],[4,3],[5,2],[6,2],[7,2],[8,2],[9,2],[10,1],[11,1],[12,1],[13,1],[14,1],[15,1],[16,1],[17,1],[18,1],[19,1]];
+            var histogram_x_scale = d3.scaleLinear().domain([0,maxx]).range([0,chartwidth]);
+            var histogram_y_scale = d3.scaleLinear().domain([0,maxy]).range([chartheight,0]);
+            d3.select("body")
+              .append("svg")
+              .attr("id","histogram")
+              .attr("width", chartwidth + 2 * margin )
+              .attr("height", chartheight + 2 * margin )
+              .append("g")
+              .call(d3.axisBottom(histogram_x_scale))
+              .attr("transform","translate(" + margin + "," + (chartheight + margin) + ")");
+            d3.select("#histogram")
+              .append("g")
+              .call(d3.axisLeft(histogram_y_scale))
+              .attr("transform","translate(" + margin + "," + margin + ")");
+            d3.select("#histogram")
+              .selectAll()
+              .data(histogram_data)
+              .enter()
+              .append("rect")
+              .attr("width", chartwidth / maxx )
+              .attr("x", function(d) { return (d[0] - 0.5) * chartwidth / maxx + margin; } )
+              .attr("y", function(d) { 
+                             return chartheight + margin - d[1] * chartheight / maxy; } )
+              .attr("height", function(d) { return d[1] * chartheight / maxy; } )
+      // 3/13 added interactivity with the bars - mouseover events
+              .on("mouseover", function() { d3.select(this).style("fill","dodgerblue") } )
+              .on("mouseout", function() { d3.select(this).style("fill","black") } );
+            
+             d3.select("#histogram")
+               .selectAll()
+               .data(histogram_data)
+               .enter()
+               .append("text")	
+               .attr("x", function(d) { return (d[0]) * chartwidth / maxx + margin - 5; } )
+               .attr("y", function(d) { 
+                             return chartheight + margin - d[1] * chartheight / maxy - 5; } )	
+               .text(function(d) { return d[1]; } );					       
+          </script>
+          </div>
+          <p>
+            Elliott: 5, Larson: 3, Logano: 3, Reddick: 3, Bell: 2, Byron: 2, Chastain: 2, Hamlin: 2, Harvick: 2, Bowman: 1, Briscoe: 1, Buescher: 1, Ku Busch: 1, Ky Busch: 1, Cindric: 1, Dillon: 1, Jones: 1, Suarez: 1, Wallace: 1,   
+          </p>
+        <hr>
+        <p >Data Collected From: <a href="https://www.driveraverages.com/" target="_blank" rel="noopener noreferrer">DriverAverages.com</a></p>
+    </body>
+</html>

@@ -1,0 +1,285 @@
+
+<html>
+  <head>
+	<title>2022 Manufacturer Data</title>
+	<link rel="stylesheet" type="text/css" href="test.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.6.0/d3.min.js"></script>  	
+</head>
+  <body>
+    <h1>
+		<a href="./index.html">2022 NASCAR Manufacturer Data</a>
+	</h1>
+	<ul>
+		<li><a href="./wins.html">WINS</a></li>
+		<li><a href="./playoffs.html">PLAYOFFS</a></li>
+		<li><a href="./teams.html">TEAMS</a></li>
+		<li><a href="./mans.html">MANUFACTURERS</a></li>
+	  </ul>
+	<hr>
+	
+<h3>Manufacturer Wins by Track Type</h3>
+<div class="mx-sm-auto mx-0 col-lg-6 col-12 text-center px-0">
+	<div id="donut" class="donut"></div>
+</div>
+<div class="donutbtns">
+	<button id="total" class="donutbtn">Total Wins</button>
+	<button id="speed" class="donutbtn">Speedways</button>
+	<button id="short" class="donutbtn">Short Tracks</button>
+	<button id="super" class="donutbtn">Superspeedways</button>
+	<button id="road" class="donutbtn">Road Courses</button>
+</div>
+	<div id="donut"></div>
+	<script>
+		var totalwins = [{
+        title: "Chevrolet",
+        value: 19,
+        all: 100
+    },
+    {
+        title: "Ford",
+        value: 9,
+        all: 100
+    },
+    {
+        title: "Toyota",
+        value: 8,
+        all: 100
+    },
+];
+
+//speedways
+var speedways = [{
+        title: "Chevrolet",
+        value: 6,
+        all: 100
+    },
+    {
+        title: "Ford",
+        value: 6,
+        all: 100
+    },
+    {
+        title: "Toyota",
+        value: 4,
+        all: 100
+    },
+];
+
+//short tracks
+var shortTracks = [{
+        title: "Chevrolet",
+        value: 1,
+        all: 100
+    },
+    {
+        title: "Ford",
+        value: 2,
+        all: 100
+    },
+    {
+        title: "Toyota",
+        value: 3,
+        all: 100
+    },
+];
+
+//superspeedways
+var superSpeedways = [{
+        title: "Chevrolet",
+        value: 7,
+        all: 100
+    },
+    {
+        title: "Ford",
+        value: 1,
+        all: 100
+    },
+    {
+        title: "Toyota",
+        value: 0,
+        all: 100
+    },
+];
+
+//road courses
+var roadCourses = [{
+        title: "Chevrolet",
+        value: 5,
+        all: 100
+    },
+    {
+        title: "Ford",
+        value: 0,
+        all: 100
+    },
+    {
+        title: "Toyota",
+        value: 1,
+        all: 100
+    },
+];
+
+var width = 500;
+var height = 500;
+var radius = Math.min(width, height) / 2;
+var donutWidth = 95;
+var color = d3.scaleOrdinal()
+    .range(["#f3d459", "#04347c", "#ec0b1b"]);
+
+var svg = d3.select('#donut')
+    .append('svg')
+    .attr('width', width)
+    .attr('height', height)
+    .append('g')
+    .attr('transform', 'translate(' + (width / 2) +
+        ',' + (height / 2) + ')');
+
+var arc = d3.arc()
+    .innerRadius(radius - donutWidth)
+    .outerRadius(radius);
+
+var pie = d3.pie()
+    .value(function (d) {
+        return d.value;
+    })
+    .sort(null);
+
+var legendRectSize = 13;
+var legendSpacing = 7;
+
+var donutTip = d3.select("body").append("div")
+    .attr("class", "donut-tip")
+    .style("opacity", 0);
+
+var path = svg.selectAll('path')
+    .data(pie(totalwins))
+    .enter()
+    .append('path')
+    .attr('d', arc)
+    .attr('fill', function (d, i) {
+        return color(d.data.title);
+    })
+    .attr('transform', 'translate(0, 0)')
+    .on('mouseover', function (d, i) {
+        d3.select(this).transition()
+            .duration('50')
+            .attr('opacity', '.85');
+        donutTip.transition()
+            .duration(50)
+            .style("opacity", 1);
+        let num = (Math.round((d.value / d.data.all) * 100)).toString() + ' win(s)';
+        donutTip.html(num)
+            .style("left", (d3.event.pageX + 10) + "px")
+            .style("top", (d3.event.pageY - 15) + "px");
+
+    })
+    .on('mouseout', function (d, i) {
+        d3.select(this).transition()
+            .duration('50')
+            .attr('opacity', '1');
+        donutTip.transition()
+            .duration('50')
+            .style("opacity", 0);
+    });
+
+
+var legend = svg.selectAll('.legend')
+    .data(color.domain())
+    .enter()
+    .append('g')
+    .attr('class', 'circle-legend')
+    .attr('transform', function (d, i) {
+        var height = legendRectSize + legendSpacing;
+        var offset = height * color.domain().length / 2;
+        var horz = -2 * legendRectSize - 13;
+        var vert = i * height - offset;
+        return 'translate(' + horz + ',' + vert + ')';
+    });
+
+legend.append('circle')
+    .style('fill', color)
+    .style('stroke', color)
+    .attr('cx', 0)
+    .attr('cy', 0)
+    .attr('r', '.5rem');
+
+legend.append('text')
+    .attr('x', legendRectSize + legendSpacing)
+    .attr('y', legendRectSize - legendSpacing)
+    .text(function (d) {
+        return d;
+    });
+
+function change(data) {
+    var pie = d3.pie()
+        .value(function (d) {
+            return d.value;
+        }).sort(null)(data);
+
+    var width = 500;
+    var height = 500;
+    var radius = Math.min(width, height) / 2;
+    var donutWidth = 95;
+
+    path = d3.select("#donut")
+        .selectAll("path")
+        .data(pie); // Compute the new angles
+    var arc = d3.arc()
+        .innerRadius(radius - donutWidth)
+        .outerRadius(radius);
+    path.attr("d", arc);
+}
+
+d3.select("button#total")
+    .on("click", function () {
+        change(totalwins);
+    })
+d3.select("button#speed")
+    .on("click", function () {
+        change(speedways);
+    })
+d3.select("button#short")
+    .on("click", function () {
+        change(shortTracks)
+    })
+d3.select("button#super")
+    .on("click", function () {
+        change(superSpeedways);
+    })
+d3.select("button#road")
+    .on("click", function () {
+        change(roadCourses);
+    })
+	</script>
+	<br>
+	<div class="table">
+	<table>
+		<tr>
+		  <th>Manufacturer</th>
+		  <th>Speedway Wins</th>
+		  <th>Short Track Wins</th>
+		  <th>Superspeedway Wins</th>
+		  <th>Road Course Wins</th>
+		</tr>
+		<tr>
+		  <td>Chevrolet</td>
+		  <td>Auto Club, Las Vegas, Dover, Darlington, Texas, Homestead</td>
+		  <td>Martinsville</td>
+		  <td>Talladega, Atlanta</td>
+		</tr>
+		<tr>
+		  <td>Ford</td>
+		  <td>Francisco Chang</td>
+		  <td>Mexico</td>
+		</tr>
+		<tr>
+			<td>Toyota</td>
+			<td>Francisco Chang</td>
+			<td>Mexico</td>
+		  </tr>
+	  </table>
+	  </div>
+	<hr>
+	<p >Data Collected From: <a href="https://www.jayski.com/2022-cup-manufacturers-standings/" target="_blank" rel="noopener noreferrer">Jayski</a></p>
+  </body>
+</html>
