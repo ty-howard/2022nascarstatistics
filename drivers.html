@@ -1,0 +1,77 @@
+<html>
+    <head>
+        <title>2022 Win Data</title>
+        <link rel="stylesheet" type="text/css" href="test.css" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    </head>
+    <body>
+        <h1>
+            <a href="./index.html">2022 NASCAR Win Data</a>
+        </h1>
+
+        <ul>
+          <li><a href="./drivers.html">DRIVERS</a></li>
+          <li><a href="./playoffs.html">PLAYOFFS</a></li>
+          <li><a href="./teams.html">TEAMS</a></li>
+          <li><a href="./mans.html">MANUFACTURERS</a></li>
+        </ul>
+        <hr>
+        <div id="canvasdiv" style="display:block">
+        <canvas id="myChart" style="max-width:1000px"></canvas>
+        </div>
+
+        <script>
+        var xValues = ["Chase Elliott", "Joey Logano", "Kyle Larson", "Tyler Reddick", "Christopher Bell", "William Byron", "Ross Chastain", "Denny Hamlin", "Kevin Harvick", "Alex Bowman", "Chase Briscoe", "Chris Buescher", "Kurt Busch", "Kyle Busch", "Austin Cindric", "Austin Dillon", "Erik Jones", "Daniel Suarez", "Bubba Wallace"];
+        var yValues = [5,4,3,3,3,2,2,2,2,1,1,1,1,1,1,1,1,1,1,0];
+        var barColors = ["#001389", "#fbce07", "#0067e9", "#bc6236", "#febd18", "#d7212e", "#e11e26", "#3a256c", "#cdd5e1", "#f2e5e2", "#b50d08", "#65bb88", "#0d0b0c", "#f6ca00", "#fef200", "#e26121", "#011ca8", "#9772c5", "#fe3008"];
+
+        new Chart("myChart", {
+        type: "bar",
+        data: {
+            labels: xValues,
+            datasets: [{
+            backgroundColor: barColors,
+            data: yValues
+            }]
+        },
+        options: {
+            legend: {display: false},
+            title: {
+            display: true,
+            text: "2022 NASCAR Drivers by Number of Wins"
+            }
+        }
+        });
+        </script>
+        <br>
+        <div id="canvasdiv2" style="display:block">
+        <canvas id="myChart2" style="max-width:1000px"></canvas>
+        </div>
+
+        <script>
+       var xValues = ["Chase Elliott", "Joey Logano", "Kyle Larson", "Tyler Reddick", "Christopher Bell", "William Byron", "Ross Chastain", "Denny Hamlin", "Kevin Harvick", "Alex Bowman", "Chase Briscoe", "Chris Buescher", "Kurt Busch", "Kyle Busch", "Austin Cindric", "Austin Dillon", "Erik Jones", "Daniel Suarez", "Bubba Wallace"];
+        var yValues = [857,784,635,573,503,746,692,624,119,627,280,280,194,182,150,147,137,86,24];
+        var barColors = ["#001389", "#fbce07", "#0067e9", "#bc6236", "#febd18", "#d7212e", "#e11e26", "#3a256c", "#cdd5e1", "#f2e5e2", "#b50d08", "#65bb88", "#0d0b0c", "#f6ca00", "#fef200", "#e26121", "#011ca8", "#9772c5", "#fe3008"];
+
+        new Chart("myChart2", {
+        type: "bar",
+        data: {
+            labels: xValues,
+            datasets: [{
+            backgroundColor: barColors,
+            data: yValues
+            }]
+        },
+        options: {
+            legend: {display: false},
+            title: {
+            display: true,
+            text: "2022 NASCAR Winners by Number of Laps Led"
+            }
+        }
+        });
+        </script>
+        <hr>
+        <p >Data Collected From: <a href="https://www.driveraverages.com/" target="_blank" rel="noopener noreferrer">DriverAverages.com</a></p>
+    </body>
+</html>
