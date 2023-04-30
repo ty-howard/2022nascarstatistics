@@ -1,3 +1,4 @@
+
 <html>
     <head>
         <title>2022 Team Data</title>
@@ -25,9 +26,15 @@
           var margin = 30;
           var maxx = 36; 
           var maxy = 12; 
-          var points = [["Hendrick","Larson","1","1"],["Hendrick","Elliott","3","2"],["Hendrick","Larson","4","3"],["Hendrick","Bowman","7","4"],
-                        ["Gibbs","Truex Jr.","8","3"],["Gibbs","Truex Jr.","2","1"],["Gibbs","Truex Jr.","5","2"],
-                        ["Penske","Blaney","6","1"],["Penske","Blaney","9","2"],["Penske","Blaney","11","4"],["Penske","Blaney","12","5"],["Penske","Logano","10","3"]]; 
+          var points = [["Hendrick Motorsports","Kyle Larson","2","1"],["Hendrick Motorsports","Alex Bowman","3","2"],["Hendrick Motorsports","William Byron","5","3"],["Hendrick Motorsports","William Byron","8","4"],["Hendrick Motorsports","Chase Elliott","11","5"],["Hendrick Motorsports","Chase Elliott","17","6"],["Hendrick Motorsports","Chase Elliott","19","7"],["Hendrick Motorsports","Chase Elliott","21","8"],["Hendrick Motorsports","Kyle Larson","25","9"],["Hendrick Motorsports","Chase Elliott","31","10"],["Hendrick Motorsports","Kyle Larson","34","11"],
+                        ["Joe Gibbs Racing","Denny Hamlin","7","1"],["Joe Gibbs Racing","Kyle Busch","9","2"],["Joe Gibbs Racing","Denny Hamlin","14","3"],["Joe Gibbs Racing","Christopher Bell","20","4"],["Joe Gibbs Racing","Christopher Bell","32","5"],["Joe Gibbs Racing","Christopher Bell","35","6"],
+                        ["Team Penske","Austin Cindric","1","1"],["Team Penske","Joey Logano","12","2"],["Team Penske","Joey Logano","15","3"],["Team Penske","Joey Logano","33","4"],["Team Penske","Joey Logano","36","5"],
+                        ["Richard Childress Racing","Tyler Reddick","18","1"],["Richard Childress Racing","Tyler Reddick","22","2"],["Richard Childress Racing","Austin Dillon","26","3"],["Richard Childress Racing","Tyler Reddick","30","4"],
+                        ["Trackhouse Racing","Ross Chastain","6","1"],["Trackhouse Racing","Ross Chastain","10","2"],["Trackhouse Racing","Daniel Suarez","16","3"],
+                        ["Stewart-Haas Racing","Chase Briscoe","4","1"],["Stewart-Haas Racing","Kevin Harvick","23","2"],["Stewart-Haas Racing","Kevin Harvick","24","3"],
+                        ["23XI Racing","Kurt Busch","13","1"],["23XI Racing","Bubba Wallace","28","2"],
+                        ["PettyGMS Motorsports","Erik Jones","27","1"],
+                        ["Roush-Fenway Keselowski Racing","Chris Buescher","29","1"]]; 
           // Scatter plot example
           d3.select("body")
             .append("svg")
@@ -55,9 +62,15 @@
             .attr("cx", function(d) { return d[2] * chartwidth / maxx + margin; } )
             .attr("cy", function(d) { return chartheight + margin - d[3] * chartheight / maxy; } )
             .style("fill", function(d) {
-                                  if( d[0] == "Hendrick" ) return "red";
-                                  else if (d[0] == "Gibbs" ) return "orange";
-                                  else if (d[0] == "Penske" ) return "yellow";
+                                  if( d[0] == "Hendrick Motorsports" ) return "red";
+                                  else if (d[0] == "Joe Gibbs Racing" ) return "purple";
+                                  else if (d[0] == "Team Penske" ) return "gold";
+                                  else if (d[0] == "Richard Childress Racing" ) return "darkred";
+                                  else if (d[0] == "Trackhouse Racing" ) return "blue";
+                                  else if (d[0] == "Stewart-Haas Racing" ) return "lightblue";
+                                  else if (d[0] == "23XI Racing" ) return "pink";
+                                  else if (d[0] == "PettyGMS Motorsports" ) return "orange";
+                                  else if (d[0] == "Roush-Fenway Keselowski Racing" ) return "darkgreen";
                                   else return "gray"; } )
             .append("title")
             .text(function(d) { return "Team: " + d[0] + "\nDriver: " + d[1] + "\nRace: " + d[2] + "\nWin Number: " + d[3]; } );
@@ -65,7 +78,7 @@
           .append("svg")
           .attr("id","plotlegend")
           .attr("height", chartheight + 2 * margin )
-          .attr("width", 800);
+          .attr("width", 1000);
 
 
 
@@ -80,50 +93,50 @@
           .attr("r",8)
           .attr("cx",210)
           .attr("cy",25)
-          .style("fill","orange");
+          .style("fill","purple");
         d3.select("#plotlegend")
           .append("circle")
           .attr("r",8)
-          .attr("cx",325)
+          .attr("cx",380)
           .attr("cy",25)
-          .style("fill","yellow");
+          .style("fill","gold");
         d3.select("#plotlegend")
           .append("circle")
           .attr("r",8)
-          .attr("cx",450)
+          .attr("cx",525)
           .attr("cy",25)
-          .style("fill","green");
+          .style("fill","darkred");
         d3.select("#plotlegend")
           .append("circle")
           .attr("r",8)
-          .attr("cx",575)
+          .attr("cx",750)
           .attr("cy",25)
           .style("fill","blue");
 
         d3.select("#plotlegend")
           .append("circle")
           .attr("r",8)
-          .attr("cx",75)
+          .attr("cx",10)
           .attr("cy",65)
-          .style("fill","indigo");
+          .style("fill","lightblue");
           d3.select("#plotlegend")
           .append("circle")
           .attr("r",8)
-          .attr("cx",200)
+          .attr("cx",210)
           .attr("cy",65)
-          .style("fill","black");
+          .style("fill","pink");
         d3.select("#plotlegend")
           .append("circle")
           .attr("r",8)
-          .attr("cx",325)
+          .attr("cx",380)
           .attr("cy",65)
-          .style("fill","silver");
+          .style("fill","orange");
         d3.select("#plotlegend")
           .append("circle")
           .attr("r",8)
-          .attr("cx",450)
+          .attr("cx",600)
           .attr("cy",65)
-          .style("fill","gold");
+          .style("fill","darkgreen");
 
 
 
@@ -139,14 +152,40 @@
           .text("Joe Gibbs Racing");
         d3.select("#plotlegend")
           .append("text")
-          .attr("x",60)
-          .attr("y",50)
-          .text("Trackhouse Racing")
+          .attr("x",400)
+          .attr("y",30)
+          .text("Team Penske")
         d3.select("#plotlegend")
           .append("text")
-          .attr("x",60)
-          .attr("y",50)
+          .attr("x",540)
+          .attr("y",30)
+          .text("Richard Childress Racing")
+        d3.select("#plotlegend")
+          .append("text")
+          .attr("x",769)
+          .attr("y",30)
+          .text("Trackhouse Racing")
+        
+        d3.select("#plotlegend")
+          .append("text")
+          .attr("x",25)
+          .attr("y",70)
           .text("Stewart-Haas Racing")
+        d3.select("#plotlegend")
+          .append("text")
+          .attr("x",230)
+          .attr("y",70)
+          .text("23XI Racing")
+        d3.select("#plotlegend")
+          .append("text")
+          .attr("x",400)
+          .attr("y",70)
+          .text("PettyGMS Motorsports")
+        d3.select("#plotlegend")
+          .append("text")
+          .attr("x",615)
+          .attr("y",70)
+          .text("Roush-Fenway Keselowski Racing")
         </script>
         </div>
         <hr>
