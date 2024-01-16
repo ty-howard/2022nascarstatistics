@@ -1,0 +1,67 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #3D9979;
+}
+
+/* Structure */
+
+#content {
+    background: #FFEEDB;
+    padding: 5px;
+    width: 80%;
+    /*Center Horizontally*/
+    margin: auto;
+    border-radius: 5px;
+    text-align: center;
+}
+
+ul {
+    text-align: left;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style-type: none;
+    margin-bottom: 30px;
+}
+
+#assignments {
+    margin-left: 5%;
+}
+
+/* Typography */
+
+h1 {
+    color: #233730;
+}
+
+h2 {
+    color: #233730;
+    text-align: left;
+    text-decoration: underline;
+}
+
+h3 {
+    color: #233730;
+}
+
+p {
+    color: #233730;
+}
+
+/* Buttons */
+
+a {
+    /*Remove Underline*/
+    text-decoration: none;
+    color: #233730;
+    background: #3D9979;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+a:hover {
+    color: #FFEEDB;
+    background: #3D6658;
+}
