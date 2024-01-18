@@ -1,39 +1,56 @@
-<!--Assignment 2 Page:
-An h2 for a sub header
-At least 2 paragraphs, these can be lorem ipsum
-At least 2 pictures, which are nicely formatted to fit in
-A table with at least 3 columns and 5 rows
-Styling Requirements:
-The font of the page changed to something more appealing
-A color theme which makes sense based on the content.
-The color scheme will be applied to the whole page, foreground colors, background colors... make it look good.
-Formatted navigation links (background color, padding...), which change format when hovered over
-borders and padding around images
-Table should have padding, borders, background colors
-Body background Image
-A formatted div which allows the page content to be easily readable.
-Make sure to style using all 3 techniques (element, id, and class name)
-Make sure all your colors match, and your theme looks nice.
-Helpful Resources:
-Lorem Ipsum Generator (https://www.lipsum.com/)-->
-
 <!DOCTYPE html>
 <html>
     <head>
         <!--Author: Ty Howard-->
-        <title>Custom Title</title>
+        <title>Airplanes</title>
         <link rel="stylesheet" href="styles.css">
     </head>
     <body>
         <div id="content">
         <h1>Airplanes</h1>
-        <nav id="main-nav">
+        <nav class="main-nav">
             <a href="index.html">Home</a>
             <a href="#">About</a>
             <a href="#">Pictures</a>
             <a href="#">Contact Us</a>
             <a href="../../index.html">Main Page</a>
-            </nav>
+        </nav>
+        <h2>My Favorite Planes</h2>
+        <div id="table">
+        <table>
+            <tr>
+                <th><b>Image</b></th>
+                <th><b>Type</b></th>
+                <th><b>Facts</b></th>
+            </tr>
+            <tr>
+                <td><img src="./images/a340.jpg" alt="Airbus A340-600"></td>
+                <td><p>Airbus A340-600</p></td>
+                <td><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi lacinia lacus at ornare bibendum. Nullam sit amet odio in lacus lacinia lacinia id nec orci. Maecenas vulputate lorem nec purus lacinia, vel ornare nibh fermentum. Etiam tellus purus, dignissim non elit vel, rhoncus convallis odio. Nullam volutpat massa sed tristique dictum. Morbi vel euismod nulla. Proin quis congue ipsum, sit amet bibendum nunc. Cras ornare metus vel tincidunt eleifend.</p></td>
+            </tr>
+            <tr>
+                <td><img src="./images/md11f.jpg" alt="McDonnell Dougals MD-11F"></td>
+                <td><p>McDonnell Douglas MD-11F</p></td>
+                <td><p>Vestibulum eu commodo nisi, consequat venenatis neque. Vivamus egestas metus ac tortor dictum mattis. Nullam tincidunt id libero eu ultricies. Nam eu efficitur justo. Aliquam dolor libero, facilisis eu consectetur non, malesuada nec erat. Donec tristique sem in mattis elementum. Morbi sit amet nulla a odio feugiat condimentum at vitae purus.</p></td>
+            </tr>
+            <tr>
+                <td><img src="./images/e175.jpg" alt="Embraer E175"></td>
+                <td><p>Embraer E-175</p></td>
+                <td><p>Nam semper condimentum nibh, eu lacinia nibh facilisis ac. Curabitur scelerisque magna ac justo maximus, in luctus diam interdum. Curabitur a faucibus est. Nulla vulputate tellus nec enim sodales, a aliquam ligula posuere. Sed in nibh nec lacus bibendum semper sed sit amet nibh. In pulvinar, eros ac gravida porta, justo mauris semper justo, id faucibus nulla lorem eget odio. Sed vel velit in neque tincidunt consequat at a ex. Ut mattis risus congue, interdum enim ac, pretium libero. Ut vehicula velit ac magna consequat suscipit.</p></td>
+            </tr>
+            <tr>
+                <td><img src="./images/a330.jpg" alt="Airbus A330-900"></td>
+                <td><p>Airbus A330-900</p></td>
+                <td><p>Donec varius massa non turpis fermentum, a ultricies augue mattis. Nullam malesuada interdum odio sed fermentum. Donec in imperdiet est. Quisque quis mi non ipsum imperdiet sollicitudin. Fusce efficitur varius dui ut mattis. Sed blandit augue quis lorem maximus fringilla. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Maecenas at libero risus. Sed malesuada egestas nisl sit amet dictum.</p></td>
+            </tr>
+            <tr>
+                <td><img src="./images/b787.jpg" alt="Boeing 787-9"></td>
+                <td><p>Boeing 787-9</p></td>
+                <td><p>Aenean fringilla, risus at laoreet maximus, libero dui auctor lacus, non lobortis nisi sapien sed sem. Integer eget consectetur felis. Proin ullamcorper hendrerit libero, ac fermentum eros mattis quis. Sed sed lacinia est, quis suscipit mi. Integer tristique hendrerit iaculis. Donec imperdiet lacinia facilisis. Aenean in volutpat mauris. Praesent ut urna ut nibh tristique faucibus at a mi. Maecenas vitae nisl sit amet eros sodales sodales. Quisque ac nisi orci.</p></td>
+            </tr>
+        </table>
+        </div>
+        <p><a href="https://www.pexels.com/photo/aerial-view-of-clouds-258149">Image Source</a></p>
         </div>
     </body>
 </html>
