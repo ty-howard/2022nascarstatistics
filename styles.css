@@ -26,8 +26,17 @@ li {
     margin-bottom: 30px;
 }
 
-#assignments {
-    margin-left: 5%;
+.one {
+    background-color: #3D9979;
+    margin: 20px;
+}
+
+img {
+    border: 3px solid #FFEEDB;
+}
+
+.columns img {
+    max-width: 80%;
 }
 
 /* Typography */
@@ -38,8 +47,7 @@ h1 {
 
 h2 {
     color: #233730;
-    text-align: left;
-    text-decoration: underline;
+    text-align: center;
 }
 
 h3 {
@@ -50,18 +58,26 @@ p {
     color: #233730;
 }
 
-/* Buttons */
+@media only screen and (min-width: 768px) {
+    .columns {
+        display: flex;
+    }
 
-a {
-    /*Remove Underline*/
-    text-decoration: none;
-    color: #233730;
-    background: #3D9979;
-    padding: 5px;
-    border-radius: 5px;
-}
+    .columns section {
+        padding: 20px;
+    }
 
-a:hover {
-    color: #FFEEDB;
-    background: #3D6658;
+    .columns img {
+        max-width: 100%;
+        display: block;
+        margin: auto;
+    }
+
+    .one {
+        flex: 1;
+    }
+
+    .two {
+        flex: 2;
+    }
 }
