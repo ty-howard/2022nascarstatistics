@@ -3,8 +3,6 @@
 
 https://sc.edu/study/colleges_schools/engineering_and_computing/departments/computer_science_and_engineering/index.php
 
-Make the href of all links '#' so they don't leave the page
-Use https://place-hold.it/ for your images rather than the original images.
 Use Lorem Ipsum for the text rather than the original text
 Small Screens
 Make the navbar always appear.  You do not need to worry about the hamburger menu and toggling yet
@@ -36,14 +34,14 @@ You will lose 10% if you have not properly formatted your code. e.g. indentation
     <body>
         <header>
             <article>
-                <div id="headerblk">
+                <div class="headerblk">
                     <div id="content">
-                        <h3>University of South Carolina</h3>
+                        <img src="./usctemp.png">
                     </div>
                 </div>
-                <div id="headerred">
+                <div class="headerred">
                     <div id="content">
-                        <h3>College of Engineering and Computing</h3>
+                        <h2>College of Engineering and Computing</h2>
                     </div>
                 </div>
             </article>
@@ -53,20 +51,14 @@ You will lose 10% if you have not properly formatted your code. e.g. indentation
             <div id="content">
                 <div class="columns">
                     <section class="two">
-                        <nav id="sidenav">
+                        <nav class="sidenav">
                             <ul>
                                 <li><a href="#">College of Engineering and Computing</a></li>
                                 <li><a href="#">News and Events</a></li>
                                 <li><a href="#">Academics</a></li>
                                 <li><a href="#">Research</a></li>
                                 <li class="navheader"><a href="#">Departments</a></li>
-                                <li class="navsubhead"><a href="#">Biomedical Engineering</a></li>
-                                <li class="navsubhead"><a href="#">Departments</a></li>
-                                <li class="navsubhead"><a href="#">Departments</a></li>
-                                <li class="navsubhead"><a href="#">Departments</a></li>
-                                <li class="navsubhead"><a href="#">Departments</a></li>
-                                <li class="navsubhead"><a href="#">Departments</a></li>
-                                <li class="current"></li>
+                                <li class="navsubhead"><a href="#">Computer Science and Engineering</a></li>
                                 <li><a href="#">Student Experience</a></li>
                                 <li><a href="#">Connect and Support</a></li>
                                 <li><a href="#">Our Faculty and Staff</a></li>
@@ -76,18 +68,30 @@ You will lose 10% if you have not properly formatted your code. e.g. indentation
                     </section>
 
                     <section class="seven">
-                        <img id="mainimg" src="https://place-hold.it/825x340/e8a2a2">
-                        <h3>Department of Computer Science and Engineering</h3>
-                        <h4>Faculty and students in the Department of Computer Science and Engineering are advancing the theories, principles and applications of computing to design computers, software, networks and processes. Our <a href="#">academic programs</a> provide a foundation in one of the fastest growing fields in the world, and the <a href="#">faculty members</a> engaged in <a href="#">research</a> at USC ensure that we remain at the forefront of computing.</h4>
+                        <!--<img id="mainimg" src="https://place-hold.it/825x350/e8a2a2">-->
+                        <img class="mainimg" src="./tempimg.jpg">
+                        <h2>Department of Computer Science and Engineering</h2>
+                        <h3>Faculty and students in the Department of Computer Science and Engineering are advancing the theories, principles and applications of computing to design computers, software, networks and processes. Our <a href="#">academic programs</a> provide a foundation in one of the fastest growing fields in the world, and the <a href="#">faculty members</a> engaged in <a href="#">research</a> at USC ensure that we remain at the forefront of computing.</h3>
                         <hr>
                         <div class="columns">
-                            <section class="six">
+                            <section class="seven">
                                 <h4>Department Highlights</h4>
                                 <div class="columns">
                                     <article>
                                         <div class="columns">
                                             <section class="one">
-                                                <img src="https://place-hold.it/250/e8a2a2">
+                                                <img src="https://place-hold.it/300/e8a2a2">
+                                            </section>
+                                            
+                                            <section class="four">
+                                                <h4>Research intends to develop a shift in testing and debugging for modern machine learning systems</h4>
+                                                <p>Morbi ut posuere ipsum, porta varius est. Nam ante est, dapibus at arcu quis, auctor pellentesque ante. Nullam laoreet sem non dui venenatis pharetra. Nulla sodales bibendum condimentum. Donec ut mauris vel quam hendrerit consectetur. Ut vestibulum, ante et maximus elementum, est magna porta ante, rhoncus euismod nisi ipsum vitae sapien. Maecenas a mollis risus. Aenean venenatis mi vitae massa tempus pellentesque. Curabitur eros lorem, ullamcorper quis velit et, venenatis malesuada orci. Pellentesque fermentum leo non accumsan consectetur.</p>
+                                            </section>
+                                        </div>
+
+                                        <div class="columns">
+                                            <section class="one">
+                                                <img src="https://place-hold.it/300/e8a2a2">
                                             </section>
                                             
                                             <section class="four">
@@ -95,41 +99,57 @@ You will lose 10% if you have not properly formatted your code. e.g. indentation
                                                 <p>Optimal software performance is essential for modern systems, but for developers, configuring these systems can be challenging.</p>
                                             </section>
                                         </div>
-                                        
+
                                         <div class="columns">
                                             <section class="one">
-                                                <img src="https://place-hold.it/200/e8a2a2">
+                                                <img src="https://place-hold.it/300/e8a2a2">
                                             </section>
                                             
                                             <section class="four">
-                                                <h3>Idea 2</h3>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam id enim vestibulum, tempor arcu vitae, ornare nunc.</p>
+                                                <h4>Research intends to develop a shift in testing and debugging for modern machine learning systems</h4>
+                                                <p>Optimal software performance is essential for modern systems, but for developers, configuring these systems can be challenging.</p>
                                             </section>
                                         </div>
-                                        
+
                                         <div class="columns">
                                             <section class="one">
-                                                <img src="https://place-hold.it/200/e8a2a2">
+                                                <img src="https://place-hold.it/300/e8a2a2">
                                             </section>
                                             
                                             <section class="four">
-                                                <h3>Idea 3</h3>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam id enim vestibulum, tempor arcu vitae, ornare nunc.</p>
+                                                <h4>Research intends to develop a shift in testing and debugging for modern machine learning systems</h4>
+                                                <p>Optimal software performance is essential for modern systems, but for developers, configuring these systems can be challenging.</p>
+                                            </section>
+                                        </div>
+
+                                        <div class="columns">
+                                            <section class="one">
+                                                <img src="https://place-hold.it/300/e8a2a2">
+                                            </section>
+                                            
+                                            <section class="four">
+                                                <h4>Research intends to develop a shift in testing and debugging for modern machine learning systems</h4>
+                                                <p>Optimal software performance is essential for modern systems, but for developers, configuring these systems can be challenging.</p>
                                             </section>
                                         </div>
                                     </article>
                                 </div>
                             </section>
-                            <section class="four">
+                            <section class="three">
                                 <div class="columns">
                                     <article>
-                                        <div id="rightsbtop">
-                                                <h4>Research intends to develop a shift in testing and debugging for modern machine learning systems</h4>
-                                                <p>Optimal software performance is essential for modern systems, but for developers, configuring these systems can be challenging.</p>
+                                        <div class="rightsbtop">
+                                                <h5>COMPUTER SCIENCE AND ENGINEERING</h5>
+                                                <h4>2020 At a Glance</h4>
+                                                <h1>921</h1>
+                                                <p>Undergraduate Students</p>
+                                                <h1>168</h1>
+                                                <p>Graduate Students</p>
                                         </div>
                                         <br>
-                                        <div id="rightsbbot">
-                                                <h3>Idea 2</h3>
+                                        <div class="rightsbbot">
+                                                <img src="./futuretemp.png">
+                                                <h5>ENGINEERING A BRIGHTER FUTURE</h5>
                                                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam id enim vestibulum, tempor arcu vitae, ornare nunc.</p>
                                         </div>
                                     </article>
