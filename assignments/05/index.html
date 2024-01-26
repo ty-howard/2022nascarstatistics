@@ -1,42 +1,29 @@
-<!--
-    Recreate the following page:
-
-https://sc.edu/study/colleges_schools/engineering_and_computing/departments/computer_science_and_engineering/index.php
-
-Use Lorem Ipsum for the text rather than the original text
-Small Screens
-Make the navbar always appear.  You do not need to worry about the hamburger menu and toggling yet
-You only need to list the main items in the navbar, (Top items -> No nesting)
-You can leave the + out of the nav bar
-Colors
-Colorzilla (https://www.colorzilla.com/), Allows you to eyedrop the color codes of the colors on an html page.
-Your colors must match the colors on the original page
-Objective
-I want you to be able to recreate any html/css layout given to you
-You will be honing in on your flexbox skills.
-Submit
-Add a link to the comment of this assignment on dropbox, make sure to submit
-Grading:
--25% per day late
-If you submit an incorrect link you will gather late points for each day the proper link isn't submitted.
-You will lose 5% for each missing or incorrect item.
-You will lose 10% if you have not properly formatted your code. e.g. indentation.
--->
-
 <!DOCTYPE html>
 <html>
     <head>
         <!--Author: Ty Howard-->
-        <title>Custom Title</title>
+        <title>Department of Computer Science and Engineering - College of Engineering and Computing | University of South Carolina</title>
         <link rel="stylesheet" href="styles.css">
     </head>
     
     <body>
         <header>
             <article>
+                <div class="headergtw">
+                    <div id="content">
+                        <p><b>GATEWAYS FOR:</b></p><p>STUDENTS</p><p>FACULTY & STAFF</p><p>ALUMNI</p><p>PARENTS & FAMILIES</p>&emsp;<p>CALENDAR</p><p>MAP</p><p>DIRECTORY</p><p>APPLY</p><p>GIVE</p>
+                    </div>
+                </div>
                 <div class="headerblk">
                     <div id="content">
-                        <img src="./usctemp.png">
+                        <div class="columns">
+                            <section class="six">
+                                <img src="./images/uschead.png">
+                            </section>
+                            <section class="two">
+                                <input type="text" placeholder="SEARCH SC.EDU">
+                            </section>
+                        </div>
                     </div>
                 </div>
                 <div class="headerred">
@@ -58,7 +45,6 @@ You will lose 10% if you have not properly formatted your code. e.g. indentation
                                 <li><a href="#">Academics</a></li>
                                 <li><a href="#">Research</a></li>
                                 <li class="navheader"><a href="#">Departments</a></li>
-                                <li class="navsubhead"><a href="#">Computer Science and Engineering</a></li>
                                 <li><a href="#">Student Experience</a></li>
                                 <li><a href="#">Connect and Support</a></li>
                                 <li><a href="#">Our Faculty and Staff</a></li>
@@ -68,73 +54,74 @@ You will lose 10% if you have not properly formatted your code. e.g. indentation
                     </section>
 
                     <section class="seven">
-                        <!--<img id="mainimg" src="https://place-hold.it/825x350/e8a2a2">-->
-                        <img class="mainimg" src="./tempimg.jpg">
+                        <img class="mainimg" src="./images/main.jpg">
                         <h2>Department of Computer Science and Engineering</h2>
                         <h3>Faculty and students in the Department of Computer Science and Engineering are advancing the theories, principles and applications of computing to design computers, software, networks and processes. Our <a href="#">academic programs</a> provide a foundation in one of the fastest growing fields in the world, and the <a href="#">faculty members</a> engaged in <a href="#">research</a> at USC ensure that we remain at the forefront of computing.</h3>
                         <hr>
                         <div class="columns">
+                            <div class="highlights">
                             <section class="seven">
-                                <h4>Department Highlights</h4>
+                                <h3>Department Highlights</h3>
                                 <div class="columns">
                                     <article>
                                         <div class="columns">
                                             <section class="one">
-                                                <img src="https://place-hold.it/300/e8a2a2">
+                                                <img src="./images/hl1.jpg">
                                             </section>
                                             
                                             <section class="four">
-                                                <h4>Research intends to develop a shift in testing and debugging for modern machine learning systems</h4>
-                                                <p>Morbi ut posuere ipsum, porta varius est. Nam ante est, dapibus at arcu quis, auctor pellentesque ante. Nullam laoreet sem non dui venenatis pharetra. Nulla sodales bibendum condimentum. Donec ut mauris vel quam hendrerit consectetur. Ut vestibulum, ante et maximus elementum, est magna porta ante, rhoncus euismod nisi ipsum vitae sapien. Maecenas a mollis risus. Aenean venenatis mi vitae massa tempus pellentesque. Curabitur eros lorem, ullamcorper quis velit et, venenatis malesuada orci. Pellentesque fermentum leo non accumsan consectetur.</p>
+                                                <h4>Research Spotlight: Research intends to develop a shift in testing and debugging for modern machine learning systems >></h4>
+                                                <p>Optimal software performance is essential for modern systems, but for devleopers, configuring these components can be challenging. One CEC professor is currently working on a different method for testing and fixing complex, highly configurable machine learning systems.</p>
                                             </section>
                                         </div>
-
+                                        <hr>
                                         <div class="columns">
-                                            <section class="one">
-                                                <img src="https://place-hold.it/300/e8a2a2">
+                                            <section class="ten">
+                                                <img src="./images/hl2.jpg">
                                             </section>
                                             
-                                            <section class="four">
-                                                <h4>Research intends to develop a shift in testing and debugging for modern machine learning systems</h4>
-                                                <p>Optimal software performance is essential for modern systems, but for developers, configuring these systems can be challenging.</p>
+                                            <section class="forty">
+                                                <h4>Faculty Spotlight: Preparing for the next generation of wireless networks >></h4>
+                                                <p>Assistant Professor Sanjib Sur recently received a five-year, National Science Foundation CAREER Award for his research on developing sensing and imaging applications for real world devices on future and advanced wireless networks.</p>
                                             </section>
                                         </div>
-
+                                        <hr>
                                         <div class="columns">
-                                            <section class="one">
-                                                <img src="https://place-hold.it/300/e8a2a2">
+                                            <section class="ten">
+                                                <img src="./images/hl3.png">
                                             </section>
                                             
-                                            <section class="four">
-                                                <h4>Research intends to develop a shift in testing and debugging for modern machine learning systems</h4>
-                                                <p>Optimal software performance is essential for modern systems, but for developers, configuring these systems can be challenging.</p>
+                                            <section class="forty">
+                                                <h4>Undergraduate Student Spotlight: AI aims to improve telehealth >></h4>
+                                                <p>The COVID-19 pandemic created challenges to the quality of care not only by increasing the number of patients needing mental health treatment, but also by moving many appointments and communications from in-person to telehealth.</p>
                                             </section>
                                         </div>
-
+                                        <hr>
                                         <div class="columns">
-                                            <section class="one">
-                                                <img src="https://place-hold.it/300/e8a2a2">
+                                            <section class="ten">
+                                                <img src="./images/hl4.jpg">
                                             </section>
                                             
-                                            <section class="four">
-                                                <h4>Research intends to develop a shift in testing and debugging for modern machine learning systems</h4>
-                                                <p>Optimal software performance is essential for modern systems, but for developers, configuring these systems can be challenging.</p>
+                                            <section class="forty">
+                                                <h4>Alumni Spotlight: Computer Science Alumna creates one of TIME's "Best Inventions of 2020" >></h4>
+                                                <p>Laura Boccanfuso, a computer science doctoral grad, founded Van Robotics. Now, their tutoring robot ABii was just named one of the Top 100 Inventions of 2020 by TIME Magazine.</p>
                                             </section>
                                         </div>
-
+                                        <hr>
                                         <div class="columns">
-                                            <section class="one">
-                                                <img src="https://place-hold.it/300/e8a2a2">
+                                            <section class="ten">
+                                                <img src="./images/hl5.jpg">
                                             </section>
                                             
-                                            <section class="four">
+                                            <section class="forty">
                                                 <h4>Research intends to develop a shift in testing and debugging for modern machine learning systems</h4>
-                                                <p>Optimal software performance is essential for modern systems, but for developers, configuring these systems can be challenging.</p>
+                                                <p>Integer in felis nunc. Aliquam dictum pharetra leo sed tempor. Phasellus egestas porttitor risus nec aliquet. Aliquam ac odio non justo ornare porta. Cras ac scelerisque diam. Phasellus sodales felis nulla, id tempor nunc porta ut. Aenean iaculis tincidunt tincidunt. Pellentesque sollicitudin tincidunt tincidunt. Vestibulum nec hendrerit risus.</p>
                                             </section>
                                         </div>
                                     </article>
                                 </div>
                             </section>
+                            </div>
                             <section class="three">
                                 <div class="columns">
                                     <article>
@@ -148,9 +135,11 @@ You will lose 10% if you have not properly formatted your code. e.g. indentation
                                         </div>
                                         <br>
                                         <div class="rightsbbot">
-                                                <img src="./futuretemp.png">
+                                                <img src="./images/future.png">
                                                 <h5>ENGINEERING A BRIGHTER FUTURE</h5>
-                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam id enim vestibulum, tempor arcu vitae, ornare nunc.</p>
+                                                <h4>Give to Computer Science and Engineering</h4>
+                                                <p>Support the students and research in the Department of Computer Science and Engineering by making your gift today.</p>
+                                                <a href="#">Give now >></a>
                                         </div>
                                     </article>
                                 </div>
@@ -162,9 +151,62 @@ You will lose 10% if you have not properly formatted your code. e.g. indentation
         </main>
         
         <footer>
-            <div id="content">
-                <h3>Test Footer</h3>
-            </div>
+            <article>
+                <div class="footer1">
+                    <div id="content">
+                        <div class="columns">
+                            <section class="seven">
+                                <h2>College of Engineering and Computing</h2>
+                            </section>
+                            <section class="three">
+                                <p>Location</p><p>Contact</p><p>Give</p><p>Social Media</p>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer2">
+                    <div id="content">
+                        <img src="./images/uscfoot.png">
+                        <div class="columns">
+                            <section class="one">
+                            <h5>COLLEGES & SCHOOLS</h5>
+                            <hr>
+                            <p>Arts & Sciences</p>
+                            <p>Business</p>
+                            <p>Education</p>
+                            <p>Engineering and Computing</p>
+                            <p>The Graduate School</p>
+                            <p>Hospitality, Retail and Sport Management</p>
+                            </section>
+                            <section class="1">
+                            <h5>OFFICES & DIVISIONS</h5>
+                            <hr>
+                            <p>Employement</p>
+                            <p>Undergraduate Admissions</p>
+                            <p>Finanial Aid and Scholarships</p>
+                            <p>Bursar (fee payment)</p>
+                            <p>Veterans and Military Services</p>
+                            <p>Disability Resources</p>
+                            </section>
+                            <section class="one">
+                            <h5>TOOLS</h5>
+                            <hr>
+                            <p>Carolina Alert</p>
+                            <p>Campus Email</p>
+                            <p>my.sc.edu</p>
+                            <p>Blackboard</p>
+                            <p>Campus Safety and Wellness</p>
+                            <p>PeopleSoft Finance</p>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer3">
+                    <div id="content">
+                        <p>This section would normally include legal info for the University, but I'm using it for crediting. All photos were taken from the original site and do not belong to me.</p>
+                    </div>
+                </div>
+            </article>
         </footer>
     </body>
 </html>
