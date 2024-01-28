@@ -1,0 +1,9 @@
+iframe {
+    width: 1280px;
+    height: 720px;
+}
+
+.content {
+    margin: auto;
+    text-align: center;
+}
