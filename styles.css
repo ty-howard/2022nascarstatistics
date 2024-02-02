@@ -44,6 +44,11 @@ section {
     padding: 10px;
 }
 
+.projects {
+    width: 500px;
+    height: 300px;
+}
+
 /* Typography */
 
 h1 {
