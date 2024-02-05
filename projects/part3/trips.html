@@ -2,7 +2,7 @@
 <html>
     <head>
         <!--Author: Ty Howard-->
-        <title>Airlines</title>
+        <title>Trip Length</title>
         <link rel="stylesheet" href="styles.css">
     </head>
     <body>
@@ -24,18 +24,46 @@
         </nav>
         <hr>
         <h4>Selected Date: 05/02/2024</h4>
-        <h2>Search by Airline</h2>
-        <input class="searchbar" placeholder='Enter airline name (ex. "Delta")'>
+        <h2>Search by Trip Length</h2>
+        <div class="slidecontainer">
+            <input type="range" min="1" max="8" value="4.5" class="slider" step="0.5" id="myRange">
+            <div id="columns">
+                <p class="one" id="sl-left">1 hour</p>
+                <p class="one" id="sl-middle"><span id="demo"></span> hour(s)</p>
+                <p class="one" id="sl-right">8 hours</p>
+            </div>
+        </div>
         <div id="results">
             <div id="columns-thin">
                 <section class="twoL">
                     <h4>Flights</h4>
                 </section>
                 <section class="twoR">
-                    <h4>2 results</h4>
+                    <h4>3 results</h4>
                 </section>
             </div>
             <hr>
+            <div class="flight">
+                <div id="columns-thin">
+                    <section class="one">
+                        <img src="https://place-hold.it/80/EEEEEE">
+                    </section>
+                    <section class="two" id="flight-details">
+                        <p>United Airlines | 05/02/2024</p>
+                        <hr>
+                        <p>Destination: Washington, D.C.</p>
+                        <p>Plane: Embraer E-175</p>
+                        <p>Trip Length: 1 hour 3 minutes</p>
+                        <p>Times: 8:00 AM - 9:03 AM</p>
+                    </section>
+                    <section class="one" id="price">
+                        <h2>$48</h2>
+                    </section>
+                    <section class="one">
+                        <button id="book-btn">BOOK NOW</button>
+                    </section>
+                </div>
+            </div>
             <div class="flight">
                 <div id="columns-thin">
                     <section class="one">
@@ -63,15 +91,15 @@
                         <img src="https://place-hold.it/80/EEEEEE">
                     </section>
                     <section class="two" id="flight-details">
-                        <p>Delta Air Lines | 05/02/2024</p>
+                        <p>Frontier Airlines | 05/02/2024</p>
                         <hr>
-                        <p>Destination: Los Angeles, CA</p>
-                        <p>Plane: Boeing 737-900</p>
-                        <p>Trip Length: 5 hours 42 minutes</p>
-                        <p>Times: 8:00 AM - 1:42 PM</p>
+                        <p>Destination: Boston, MA</p>
+                        <p>Plane: Airbus A320neo</p>
+                        <p>Trip Length: 1 hour 58 minutes</p>
+                        <p>Times: 8:00 AM - 9:58 AM</p>
                     </section>
                     <section class="one" id="price">
-                        <h2>$408</h2>
+                        <h2>$121</h2>
                     </section>
                     <section class="one">
                         <button id="book-btn">BOOK NOW</button>

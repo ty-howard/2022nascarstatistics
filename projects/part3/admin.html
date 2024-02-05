@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--Author: Ty Howard-->
+        <title>Destinations</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div id="content">
+        <a href="./login.html" id="login">Login</a>
+        <a href="./index.html" id="title"><h1>RDU Aero Atlas</h1></a>
+        <nav id="nav-columns">
+            <div id="hamburger">
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+            <ul id="nav-items" class="flex-container hide">
+                <section class="one"><a href="./dests.html"><li job="nav">Destinations</li></a></section>
+                <section class="one"><a href="./airlines.html"><li>Airlines</li></a></section>
+                <section class="one"><a href="./planes.html"><li>Planes</li></a></section>
+                <section class="one"><a href="./trips.html"><li>Trip Length</li></a></section>
+            </ul>
+        </nav>
+        <hr>
+        <h2>Add a Flight</h2>
+        <h3 class="add">Date</h3>
+        <input type="date" id="cal-sel">
+        <h3 class="add">Airline</h3>
+        <input class="loginbar" placeholder='Enter Airline'>
+        <h3 class="add">Destination</h3>
+        <input class="loginbar" placeholder='Enter Destination'>
+        <h3 class="add">Plane</h3>
+        <input class="loginbar" placeholder='Enter Plane'>
+        <h3 class="add">Duration</h3>
+        <div class="h-m">
+            <label>Hours: </label>
+            <input type="number" id="duration" min="0" max="8">
+            <label>Minutes: </label>
+            <input type="number" id="duration" min="0" max="59">
+        </div>
+        <a class="login-txt" href="#"><button class="login-btn">SUBMIT</button></a>  
+    <script src="./script.js"></script>
+    </body>
+</html>

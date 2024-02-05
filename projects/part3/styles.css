@@ -1,13 +1,13 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background: white;
+    background: #FFFFFF;
 }
 
 /* Structure */
 
 #content {
     padding: 5px;
-    width: 80%;
+    width: 75%;
     /*Center Horizontally*/
     margin: auto;
 }
@@ -33,7 +33,7 @@ button:hover {
     height: 40px;
 }
 
-input {
+.searchbar {
     min-width: 450px;
     border: 1px solid lightgrey;
     display: block;
@@ -50,10 +50,12 @@ input {
     border: 1px solid lightgrey;
     display: block;
     margin: 0 auto;
+    margin-top: 10px;
     padding: 10px;
     border-radius: 20px;
     font-size: 20px;
-    height: 80px;
+    height: 100px;
+    margin-bottom: 10px;
 }
 
 #results {
@@ -64,14 +66,137 @@ input {
 #book-btn {
     width: 80px;
     font-size: 12px;
-    margin-top: 20px;
+    margin-top: 28px;
 }
 
 .flight img {
     border-radius: 5px;
+    margin-top: 10px;
 }
 
+.slider {
+    -webkit-appearance: none;
+    width: 95%;
+    height: 10px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+    margin: auto;
+    display: block;
+    border-radius: 10px;
+  }
+  
+  .slider:hover {
+    opacity: 1;
+  }
+
+  .slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    background: #615756;
+    cursor: pointer;
+    border-radius: 40px;
+  }
+  
+  .slider::-moz-range-thumb {
+    width: 15px;
+    height: 15px;
+    background: #615756;
+    cursor: pointer;
+  }
+
+.slidecontainer {
+    max-width: 450px;
+    margin: auto;
+}
+
+#columns section {
+    padding: 20px;
+}
+
+#nav-columns {
+    padding: 20px;
+}
+
+#columns-thin {
+    padding: 0;
+    display: flex;
+    margin: 0;
+}
+
+#card-columns img {
+    max-width: 90%;
+    display: block;
+    margin: auto;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+#cards {
+    border: 2px solid lightgrey;
+    border-radius: 10px;
+    margin: 20px;
+    display: block;
+    max-width: 250px;
+    margin: auto;
+    margin-bottom: 30px;
+}
+
+#cards button {
+    margin-bottom: 20px;
+}
+
+.login-btn {
+    margin: auto;
+    display: block;
+}
+
+.h-m {
+    display: block;
+    margin: auto;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Hamburger styling/functionality */
+
+/* Creates space around hamburger menu */
+#hamburger {
+    padding: 10px;
+  }
+  
+  /* Creates the actual structure of the hamburger menu */
+  #hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: black;
+    margin: 6px 0;
+  }
+  
+  /* Hide class to be used in JavaScript */
+  .hide {
+    display: none;
+  }
+
 /* Typography */
+
+ul {
+    list-style-type: none;
+  }
+  
+  #main-nav ul {
+    background-color: beige;
+  }
+  
+  #nav-items li {
+    padding: 15px 0;
+    text-align: center;
+  }
 
 h1 {
     color: black;
@@ -164,35 +289,101 @@ a {
 
 #price h2 {
     font-size: 28px;
+    margin-top: 30px;
+    margin-right: 20px;
+}
+
+.slidecontainer p {
+    font-size: 12px;
+}
+
+#sl-left {
+    text-align: left;
+}
+
+#sl-right {
+    text-align: right;
+}
+
+#columns {
+    display: flex;
+    margin: auto;
+}
+
+.loginbar {
+    min-width: 120px;
+    border: 1px solid lightgrey;
+    display: block;
+    margin: 0 auto;
+    padding-left: 3px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 5px;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.login-txt {
+    text-decoration: none;
+}
+
+.add {
+    text-decoration: underline;
+}
+
+#cal-sel {
+    margin: auto;
+    display: block;
+    height: 40px;
+    min-width: 200px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    border: 1px solid lightgrey;
+    border-radius: 5px; 
+    font-size: 20px;   
+}
+
+#duration {
+    border: 1px solid lightgrey;
+    font-size: 20px;
+    border-radius: 5px;
+    height: 40px;
+}
+
+label {
+    font-size: 20px;
 }
 
 @media only screen and (min-width: 768px) {
-    #columns {
+    #card-columns {
         display: flex;
         margin: auto;
     }
 
-    #columns section {
-        padding: 20px;
-    }
-
-    #columns-thin {
-        padding: 0;
-        display: flex;
+    #nav-columns {
         margin: 0;
+        padding: 0;
+        text-align: center;
     }
 
-    #columns img {
-        max-width: 90%;
-        display: block;
-        margin: auto;
-        margin-bottom: 20px;
-    }
+     /* Hides the hamburger menu on larger resolutions (full screen) */
+  #hamburger {
+    display: none;
+  }
 
-    #cards {
-        border: 2px solid lightgrey;
-        border-radius: 10px;
-        margin-left: 20px;
-        margin-right: 20px;
-    }
+  /* Everything below this is simply for styling */
+  .flex-container {
+    display: flex;
+  }
+
+  #main-nav li {
+    flex: 1;
+  }
+
+  #nav-items {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    justify-content: space-evenly;
+  }
 }
