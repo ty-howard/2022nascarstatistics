@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--Author: Ty Howard-->
+        <title>RDU Aero Atlas</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div id="content">
+        <a href="./login.html" id="login">Login</a>
+        <a href="./index.html" id="title"><h1>RDU Aero Atlas</h1></a>
+        <nav id="nav-columns">
+            <div id="hamburger">
+              <div></div>
+              <div></div>
+              <div></div>
+            </div>
+            <ul id="nav-items" class="flex-container hide">
+                <section class="one"><a href="./index.html"><li job="nav">Home</li></a></section>
+                <section class="one"><a href="./dests.html"><li>Destinations</li></a></section>
+                <section class="one"><a href="./airlines.html"><li>Airlines</li></a></section>
+                <section class="one"><a href="./planes.html"><li>Planes</li></a></section>
+                <section class="one"><a href="./trips.html"><li>Trip Length</li></a></section>
+            </ul>
+        </nav>
+        <hr>
+        <h2>Welcome!</h2>
+        <select id="dates">
+            <option value="default">Select a Date</option> 
+            <option value="5_2">May 2, 2024</option> 
+        </select>
+        <h3>I want to search by...</h3>
+        <div id="card-columns">  
+            <section class="one" id="cards">
+                <img src="https://place-hold.it/200/EEEEEE">
+                <a href="./dests.html"><button>Destinations</button></a>
+            </section>
+            <section class="one" id="cards">
+                <img src="https://place-hold.it/200/EEEEEE">
+                <a href="./airlines.html"><button>Airlines</button></a>
+            </section>
+            <section class="one" id="cards">
+                <img src="https://place-hold.it/200/EEEEEE">
+                <a href="./planes.html"><button>Planes</button></a>
+            </section>
+            <section class="one" id="cards">
+                <img src="https://place-hold.it/200/EEEEEE">
+                <a href="./trips.html"><button>Trip Length</button></a>
+            </section>
+        </div>
+        </div>
+    <script src="./script.js"></script>
+    </body>
+</html>
