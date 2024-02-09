@@ -19,4 +19,11 @@ const updateThermometer = () => {
     document.querySelector(":root").style.setProperty("--funds", percent + "%");
 };
 
+const evalForm = (e) => {
+    e.preventDefault();
+
+    console.log("here");
+}
+
 document.getElementById("btn-cont").onclick = updateThermometer;
+document.getElementById("myForm").onsubmit = evalForm;
