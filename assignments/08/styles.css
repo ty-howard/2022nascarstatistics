@@ -59,36 +59,41 @@ img {
     margin: auto;
   }
   
-  .slider {
-    -webkit-appearance: none;
-    width: 100%;
-    height: 25px;
-    background: #d3d3d3;
-    outline: none;
-    opacity: 0.7;
-    -webkit-transition: .2s;
-    transition: opacity .2s;
-  }
-  
-  .slider:hover {
-    opacity: 1;
-  }
+.slider {
+-webkit-appearance: none;
+width: 100%;
+height: 25px;
+background: #d3d3d3;
+outline: none;
+opacity: 0.7;
+-webkit-transition: .2s;
+transition: opacity .2s;
+}
 
-  .slider::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    appearance: none;
-    width: 25px;
-    height: 25px;
-    background: #615756;
-    cursor: pointer;
-  }
-  
-  .slider::-moz-range-thumb {
-    width: 25px;
-    height: 25px;
-    background: #615756;
-    cursor: pointer;
-  }
+.slider:hover {
+opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+-webkit-appearance: none;
+appearance: none;
+width: 25px;
+height: 25px;
+background: #615756;
+cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+width: 25px;
+height: 25px;
+background: #615756;
+cursor: pointer;
+}
+
+#nav-cont {
+    width: 250px;
+    margin: auto;
+}
 
 /* Mechanics */
 
@@ -96,12 +101,29 @@ img {
     display: none;
 }
 
+.up {
+    width: 0;
+    height: 0;
+    display: inline-block;
+    border: 8px solid transparent;
+    border-bottom-color: black;
+}
+
+.down {
+    width: 0px;
+    height: 0;
+    display: inline-block;
+    border: 8px solid transparent;
+    border-top-color: black;
+}
+
 /* Typography */
 
-h1, h2, p {
+h1, h2, #nav-items {
     color: royalblue;
-    text-align: center;
     margin-top: 20px;
+    text-align: center;
+    padding: 0;
 }
 
 #ex1-cont h3, #ex2-cont h3 {
@@ -115,4 +137,40 @@ h1, h2, p {
 
 #text::placeholder {
     color: whitesmoke;
+}
+
+#nav-items span{
+    display: block;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+#nav-items span:hover{
+    cursor: pointer;
+}
+
+@media only screen and (min-width: 768px) {
+    #triangle {
+        display: none;
+    }
+
+    #nav-items {
+        display: flex;
+        padding: 0;
+        justify-content: center;
+    }
+
+    #nav-items span {
+        margin-right: 5px; /* Add space between the items */
+        margin-bottom: 10px;
+    }
+
+    #nav-items span::after {
+        content: "|"; /* Add pipe symbol */
+        margin-left: 5px; /* Add space after the pipe */
+    }
+
+    #nav-items span:last-child::after {
+        content: ""; /* Remove pipe symbol after the last item */
+    }
 }

@@ -1,3 +1,19 @@
+const togNav = () => {
+    const tri = document.getElementById("triangle");
+    const nav = document.getElementById("nav-items");
+    nav.classList.toggle("hide");
+    if(nav.classList.contains("hide")){
+        console.log("has hide");
+        triangle.classList.add("down");
+        triangle.classList.remove("up");
+    }
+    else {
+        console.log("no hide");
+        triangle.classList.add("up");
+        triangle.classList.remove("down");
+    }
+};
+
 const toEx1 = () => {
     const ex1 = document.getElementById("ex1-cont").classList.remove("hide");
     const ex2 = document.getElementById("ex2-cont").classList.add("hide");
@@ -40,6 +56,7 @@ const yoga = () => {
     image.src="./images/yoga" + output + ".jpg";
 };
 
+document.getElementById("triangle").onclick = togNav;
 document.getElementById("ex1").onclick = toEx1;
 document.getElementById("ex2").onclick = toEx2;
 document.getElementById("text").onkeyup = changeImg;
