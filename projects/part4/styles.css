@@ -34,7 +34,8 @@ hr {
 }
 
 #homecards {
-    max-width: 60%;
+    max-width: 90%;
+    min-width: 90%;
     margin: auto;
     text-align: center;
 }
@@ -55,6 +56,65 @@ hr {
     width: 200px;
     height: 200px;
     border: 2px solid grey;
+}
+
+.searchbar {
+    min-width: 40%;
+    border: 1px solid lightgrey;
+    display: block;
+    margin: 0 auto;
+    padding-left: 3px;
+    padding-top: 18px;
+    padding-bottom: 18px;
+    border-radius: 5px;
+    font-size: 20px;
+}
+
+#results {
+    width: 80%;
+    margin: auto;
+}
+
+#columns-thin {
+    padding: 0;
+    display: flex;
+    margin: 0;
+}
+
+#thinbar {
+    max-width: 100%;
+    border: 1px solid slategrey;
+    border-radius: 10px;
+}
+
+#result {
+    border: 3px solid slategrey;
+    border-radius: 10px;
+    margin: 20px;
+    padding-bottom: 10px;
+}
+
+#resimg img {
+    margin-top: 8px;
+    border: 2px solid darkslategrey;
+    width: 90%;
+    height: 90%;
+}
+
+#restxt p {
+    text-align: left;
+}
+
+#cal-sel {
+    margin: auto;
+    display: block;
+    height: 40px;
+    min-width: 200px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    border: 1px solid lightgrey;
+    border-radius: 5px; 
+    font-size: 20px;   
 }
 
 /* Mechanics */
@@ -79,6 +139,12 @@ hr {
     border-top-color: darkslategrey;
 }
 
+.login-btn {
+    margin: auto;
+    display: block;
+    margin-bottom: 50px;
+}
+
 /* Typography */
 a {
     text-decoration: none;
@@ -98,6 +164,18 @@ h1 {
 h2 {
     color: grey;
     text-align: center;
+}
+
+h3 {
+    color: black;
+    text-align: center;
+    font-weight: lighter;
+    font-size: 25px;
+}
+
+h4 {
+    margin: 0;
+    font-weight: lighter;
 }
 
 #nav-items span{
@@ -124,6 +202,52 @@ button {
 button:hover {
     background-color: royalblue;
     cursor: pointer;
+}
+
+.loginbar {
+    min-width: 120px;
+    border: 1px solid lightgrey;
+    display: block;
+    margin: 0 auto;
+    padding-left: 3px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 5px;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.login-txt {
+    text-decoration: none;
+}
+
+.twoL {
+    flex: 2;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+    margin-top: 40px;
+}    
+
+.twoR {
+    flex: 2;
+    text-align: right;
+    margin: 0;
+    padding: 0;
+    margin-top: 40px;
+}
+
+.one {
+    flex: 1;
+    text-align: center;
+}
+
+.two {
+    flex: 2;
+}
+
+.three {
+    flex: 3;
 }
 
 @media only screen and (min-width: 768px) {
