@@ -1,19 +1,9 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background: skyblue;
+    background: white;
 }
 
 /* Structure */
-
-#content {
-    background: white;
-    padding: 5px;
-    width: 80%;
-    /*Center Horizontally*/
-    margin: auto;
-    border-radius: 10px;
-}
-
 #nav-cont {
     width: 250px;
     margin: auto;
@@ -115,6 +105,22 @@ hr {
     border: 1px solid lightgrey;
     border-radius: 5px; 
     font-size: 20px;   
+}
+
+input::file-selector-button {
+    border: none;
+    border-radius: 5px;
+    color: white;
+    background-color: skyblue;
+    width: 150px;
+    height: 40px;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+input::file-selector-button:hover {
+    background-color: royalblue;
+    cursor: pointer;
 }
 
 /* Mechanics */
@@ -250,12 +256,31 @@ button:hover {
     flex: 3;
 }
 
-@font-face {
-    font-family: newFont;
-    src: url(./Righteous-Regular.ttf);
+#restxt {
+    padding-left: 20px;
+}
+
+input[type='file'] {
+    display: block;
+    margin: auto;
+    padding-left: 103px;
+    margin-bottom: 20px;
+    color: transparent;
 }
 
 @media only screen and (min-width: 768px) {
+    body {
+        background: skyblue;
+    }
+
+    #content {
+        background: white;
+        width: 80%;
+        padding: 5px;
+        margin: auto;
+        border-radius: 10px;
+    }
+
     .columns {
         display: flex;
     }
