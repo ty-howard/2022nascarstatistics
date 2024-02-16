@@ -1,0 +1,191 @@
+:root {
+    --ball-top: 0px;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #EEEEEE;
+}
+
+/* Structure */
+
+#content {
+    padding: 20px;
+    width: 80%;
+    /*Center Horizontally*/
+    margin: auto;
+}
+
+#ex1-cont, #ex2-cont {
+    padding: 20px;
+    border: 5px solid #615756;
+    width: 250px;
+    height: 600px;
+    margin: auto;
+    background-color: #539987;
+    border-radius: 10px;
+    margin-bottom: 150px;
+}
+
+#ex2-cont {
+    width: 500px;
+    height: 1700px;
+}
+
+img {
+    max-width: 100%;
+    height: 250px;
+    margin: auto;
+    display: block;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#txt-btn {
+    margin: auto;
+    display: block;
+    margin-top: 20px;
+}
+
+#nav-cont {
+    width: 250px;
+    margin: auto;
+}
+
+#ballArea {
+    width: 70%;
+    height: 80%;
+    background: #EEEEEE;
+    border: 1px solid #615756;
+    border-radius: 5px;
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+#ball {
+    width: 70px;
+    height: 70px;
+    margin: 0 auto;
+    padding: 0;
+    position: relative;
+    top: var(--ball-top);
+}
+
+.yogaImgs {
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+    cursor: pointer;
+}
+
+/* Mechanics */
+
+.hide {
+    display: none;
+}
+
+.up {
+    width: 0;
+    height: 0;
+    display: inline-block;
+    border: 8px solid transparent;
+    border-bottom-color: black;
+}
+
+.down {
+    width: 0px;
+    height: 0;
+    display: inline-block;
+    border: 8px solid transparent;
+    border-top-color: black;
+}
+
+.columns {
+    display: flex;
+}
+
+.one {
+    flex: 1;
+}
+
+/* Typography */
+
+h1, h2, #nav-items {
+    color: #539987;
+    margin-top: 20px;
+    text-align: center;
+    padding: 0;
+}
+
+h2 {
+    color: #615756;
+}
+
+#ex1-cont h3, #ex2-cont h3 {
+    color: #615756;
+    text-align: center;
+}
+
+#ex1-cont li {
+    color: #615756;
+}
+
+#text::placeholder {
+    color: #615756;
+}
+
+#nav-items span{
+    display: block;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+#nav-items span:hover{
+    cursor: pointer;
+}
+
+#start {
+    text-decoration: underline;
+    color: #615756;
+    text-align: center;
+}
+
+#start:hover {
+    cursor: pointer;
+}
+
+#stop {
+    text-decoration: underline;
+    color: #615756;
+    text-align: center;
+}
+
+#stop:hover {
+    cursor: pointer;
+}
+
+@media only screen and (min-width: 768px) {
+    #triangle {
+        display: none;
+    }
+
+    #nav-items {
+        display: flex;
+        padding: 0;
+        justify-content: center;
+    }
+
+    #nav-items span {
+        margin-right: 5px; /* Add space between the items */
+        margin-bottom: 10px;
+    }
+
+    #nav-items span::after {
+        content: "|"; /* Add pipe symbol */
+        margin-left: 5px; /* Add space after the pipe */
+    }
+
+    #nav-items span:last-child::after {
+        content: ""; /* Remove pipe symbol after the last item */
+    }
+}
