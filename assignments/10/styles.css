@@ -1,0 +1,57 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #EEEEEE;
+}
+
+/* Structure */
+
+#content {
+    padding: 20px;
+    width: 80%;
+    /*Center Horizontally*/
+    margin: auto;
+}
+
+.cont {
+    padding: 20px;
+    border: 2px solid #615756;
+    width: 45%;
+    margin: auto;
+    background-color: #539987;
+}
+
+table {
+    margin: auto;
+}
+
+tr {
+    text-align: center;
+}
+
+/* Mechanics */
+
+.hide {
+    display: none;
+}
+
+/* Typography */
+
+h1, h2 {
+    color: #539987;
+    margin-top: 20px;
+    text-align: center;
+    padding: 0;
+}
+
+h2 {
+    color: #615756;
+}
+
+h3 {
+    color: #EEEEEE;
+    text-align: center;
+}
+
+p, a {
+    color: #615756;
+}
