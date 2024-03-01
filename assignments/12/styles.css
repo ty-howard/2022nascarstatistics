@@ -1,0 +1,91 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #EEEEEE;
+}
+
+/* Structure */
+
+img {
+    display: block;
+}
+
+.house {
+    width: 90%;
+    background-color: #539987;
+    border-radius: 5px;
+    padding: 10px;
+    display: block;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+.details {
+    background-color: #615756;
+    border-radius: 5px;
+    padding: 0;
+}
+
+.detSec {
+    padding: 20px;
+}
+
+.planImg {
+    width: 80%;
+    height: auto;
+    display: block;
+    margin: auto;
+}
+
+/* Typography */
+
+h1, h2 {
+    color: #539987;
+    margin-top: 20px;
+    text-align: center;
+    padding: 0;
+}
+
+h2 {
+    color: #615756;
+}
+
+h3 {
+    color: #EEEEEE;
+    text-align: center;
+}
+
+h4 {
+    color: #539987;
+    padding: 0;
+    font-size: 35px;
+    margin: 0;
+    margin-bottom: 10px;
+    margin-top: 40px;
+}
+
+p, a {
+    color: #EEEEEE;
+    padding: 0;
+    font-size: 20px;
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+/* Larger Resolutions */
+
+@media only screen and (min-width: 600px) {
+    .columns {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: right;
+      justify-content: space-between; /* Adjust as needed */
+    }
+
+    .one {
+        flex: 1;
+    }
+
+    .three {
+        flex: 3;
+    }
+} 
