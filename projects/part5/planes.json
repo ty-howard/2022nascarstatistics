@@ -6,7 +6,21 @@
         "alliance": "None",
         "registration": "N624JB",
         "user": "Admin",
-        "date": ["2","11","2024"],
+        "date": "2/12/24",
+        "flight": [
+            {
+                "origin": "Raleigh/Durham, NC (RDU)",
+                "deptime": "5:54 AM EST"
+            },
+            {
+                "dest": "Fort Lauderdale, FL (FLL)",
+                "arrtime": "8:02 AM EST"
+            },
+            {
+                "totalhrs": "2",
+                "totalmins": "8"
+            }
+        ],
         "main_image": "n624jb.jpeg"
     },
     {
@@ -17,6 +31,20 @@
         "registration": "N446UA",
         "user": "Admin",
         "date": "2/11/24",
+        "flight": [
+            {
+                "origin": "Chicago, IL (ORD)",
+                "deptime": "6:19 PM EST"
+            },
+            {
+                "dest": "Raleigh/Durham, NC (RDU)",
+                "arrtime": "9:34 PM EST"
+            },
+            {
+                "totalhrs": "2",
+                "totalmins": "15"
+            }
+        ],
         "main_image": "n446ua.jpeg"
     },
     {
@@ -27,6 +55,20 @@
         "registration": "N111HQ",
         "user": "Admin",
         "date": "2/11/24",
+        "flight": [
+            {
+                "origin": "Raleigh/Durham, NC (RDU)",
+                "deptime": "9:40 AM"
+            },
+            {
+                "dest": "New York, NY (JFK)",
+                "arrtime": "11:11 PM"
+            },
+            {
+                "totalhrs": "1",
+                "totalmins": "31"
+            }
+        ],
         "main_image": "n111hq.jpeg"
     },
     {
@@ -37,6 +79,20 @@
         "registration": "N762AN",
         "user": "Admin",
         "date": "2/11/24",
+        "flight": [
+            {
+                "origin": "London, England (LHR)",
+                "deptime": "2:44 PM GMT"
+            },
+            {
+                "dest": "Raleigh/Durham, NC (RDU)",
+                "arrtime": "6:26 PM EST"
+            },
+            {
+                "totalhrs": "8",
+                "totalmins": "42"
+            }
+        ],
         "main_image": "n762an.jpeg"
     },
     {
@@ -47,6 +103,20 @@
         "registration": "N218BZ",
         "user": "Admin",
         "date": "2/11/24",
+        "flight": [
+            {
+                "origin": "Raleigh/Durham, NC (RDU)",
+                "deptime": "9:08 PM EST"
+            },
+            {
+                "dest": "Providence, RI (PVD)",
+                "arrtime": "11:01 PM EST"
+            },
+            {
+                "totalhrs": "1",
+                "totalmins": "53"
+            }
+        ],
         "main_image": "n218bz.jpeg"
     },
     {
@@ -57,6 +127,20 @@
         "registration": "N821DX",
         "user": "Admin",
         "date": "3/14/24",
+        "flight": [
+            {
+                "origin": "Atlanta, GA (ATL)",
+                "deptime": "7:58 PM EST"
+            },
+            {
+                "dest": "Raleigh/Durham, NC (RDU)",
+                "arrtime": "9:28 PM EST"
+            },
+            {
+                "totalhrs": "1",
+                "totalmins": "30"
+            }
+        ],
         "main_image": "n821dx.jpeg"
     },
     {
@@ -67,6 +151,20 @@
         "registration": "N926WN",
         "user": "Admin",
         "date": "3/14/24",
+        "flight": [
+            {
+                "origin": "Dallas, TX (DAL)",
+                "deptime": "10:31 AM CDT"
+            },
+            {
+                "dest": "Raleigh/Durham, NC (RDU)",
+                "arrtime": "2:03 PM EDT"
+            },
+            {
+                "totalhrs": "2",
+                "totalmins": "32"
+            }
+        ],
         "main_image": "n926wn.jpeg"
     },
     {
@@ -77,6 +175,20 @@
         "registration": "C-GDJZ",
         "user": "Admin",
         "date": "3/14/24",
+        "flight": [
+            {
+                "origin": "Raleigh/Durham, NC (RDU)",
+                "deptime": "4:55 PM EDT"
+            },
+            {
+                "dest": "Toronto, Canada",
+                "arrtime": "6:37 PM EDT"
+            },
+            {
+                "totalhrs": "1",
+                "totalmins": "42"
+            }
+        ],
         "main_image": "cgdjz.jpeg"
     }
 ]
