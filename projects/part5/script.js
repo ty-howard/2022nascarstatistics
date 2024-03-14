@@ -15,7 +15,7 @@ const togNav = () => {
 };
 
 const getPlanes = async() => {
-  const url = "./planes.json";
+  const url = "https://ty-howard.github.io/projects/part5/planes.json";
 
   try {
     const response = await fetch(url);
@@ -48,7 +48,7 @@ const getPlaneSection = (plane) => {
   columns.append(imgSection);
 
   const img = document.createElement("img");
-  img.src = "./images/111hq.jpeg";
+  img.src = "./images/" + plane.main_image;
   imgSection.append(img);
 
   const txtSection = document.createElement("section");
@@ -57,26 +57,26 @@ const getPlaneSection = (plane) => {
   columns.append(txtSection);
 
   const al = document.createElement("p");
-  al.innerHTML = "Airline: Delta";
+  al.innerHTML = "Airline: " + plane.airline;
   txtSection.append(al);
 
   const ac = document.createElement("p");
-  ac.innerHTML = "Aircraft: A350";
+  ac.innerHTML = "Aircraft: " + plane.aircraft;
   txtSection.append(ac);
 
   const ali = document.createElement("p");
-  ali.innerHTML = "Alliance: SkyTeam";
+  ali.innerHTML = "Alliance: " + plane.alliance;
   txtSection.append(ali);
 
   const reg = document.createElement("p");
-  reg.innerHTML = "Registration: N123AZ";
+  reg.innerHTML = "Registration: " + plane.registration;
   txtSection.append(reg);
 
   const hr = document.createElement("hr");
   result.append(hr);
 
   const h4 = document.createElement("h4");
-  h4.innerHTML = "Logged on 2/11/2024 by Admin";
+  h4.innerHTML = "Logged on " + plane.date + " by " + plane.user;
   result.append(h4);
 
   return result;
