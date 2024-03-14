@@ -1,14 +1,16 @@
 [
     {
+        "_id": "1",
         "airline": "jetBlue Airways",
         "aircraft": "Airbus A320-200",
         "alliance": "None",
         "registration": "N624JB",
         "user": "Admin",
-        "date": "2/11/24",
+        "date": ["2","11","2024"],
         "main_image": "n624jb.jpeg"
     },
     {
+        "_id": "2",
         "airline": "United Airlines",
         "aircraft": "Airbus A320-200",
         "alliance": "Star Alliance",
@@ -18,6 +20,7 @@
         "main_image": "n446ua.jpeg"
     },
     {
+        "_id": "3",
         "airline": "American Airlines",
         "aircraft": "Embraer E175-LR",
         "alliance": "OneWorld",
@@ -27,6 +30,7 @@
         "main_image": "n111hq.jpeg"
     },
     {
+        "_id": "4",
         "airline": "American Airlines",
         "aircraft": "Boeing 777-200",
         "alliance": "OneWorld",
@@ -36,6 +40,7 @@
         "main_image": "n762an.jpeg"
     },
     {
+        "_id": "5",
         "airline": "Breeze Airways",
         "aircraft": "Airbus A220-300",
         "alliance": "None",
@@ -45,6 +50,7 @@
         "main_image": "n218bz.jpeg"
     },
     {
+        "_id": "6",
         "airline": "Delta Air Lines",
         "aircraft": "Boeing 757-200",
         "alliance": "SkyTeam",
@@ -54,6 +60,7 @@
         "main_image": "n821dx.jpeg"
     },
     {
+        "_id": "7",
         "airline": "Southwest Airlines",
         "aircraft": "Boeing 737-700",
         "alliance": "None",
@@ -63,6 +70,7 @@
         "main_image": "n926wn.jpeg"
     },
     {
+        "_id": "8",
         "airline": "Air Canada Express",
         "aircraft": "Mitsubishi CRJ-900LR",
         "alliance": "Star Alliance",
