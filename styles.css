@@ -68,6 +68,10 @@ p {
     color: #233730;
 }
 
+a {
+    color: #233730;
+}
+
 @media only screen and (min-width: 768px) {
     .columns {
         display: flex;
