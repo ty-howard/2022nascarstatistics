@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!--Author: Ty Howard-->
+        <title>Aircraft</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <div id="content">
+            <a href="./index.html"><h1>RDU Plane Spotter</h1></a>
+
+            <nav id="nav-cont">
+                <div id="triangle" class="down">
+                  <div></div>
+                </div>
+                <div id="nav-items" class="hide">
+                    <span><a href="./index.html">Home</a></span>
+                    <span><a href="./airlines.html">Airlines</a></span>
+                    <span><b><a href="./aircraft.html">Aircraft</a></b></span>
+                    <span><a href="./alliances.html">Alliances</a></span>
+                    <span><a href="./reg.html">Registration</a></span>
+                    <span><a href="./log.html">Log</a></span>
+                </div>
+            </nav>
+
+            <hr>
+
+            <main id="main-cont">
+                <h2>Search by Aircraft</h2>
+                <input class="searchbar" placeholder='Enter aircraft type (ex. "737-800")'>
+                <div id="results">
+                    <div id="columns-thin">
+                        <section class="twoL">
+                            <h4>Results for "Airbus A320"</h4>
+                        </section>
+                        <section class="twoR">
+                            <h4>2 Results</h4>
+                        </section>
+                    </div>
+                    <hr id="thinbar">
+                    <div class="columns" id="resultscont">
+                        <section class="one" id="result">
+                            <div class="columns">
+                                <section class="one" id="resimg">
+                                    <img src="./images/624jb.jpeg">
+                                </section>
+                                <section class="one" id="restxt">
+                                    <p>Airline: jetBlue Airways</p>
+                                    <p>Aircraft: Airbus A320-200</p>
+                                    <p>Alliance: None</p>
+                                    <p>Registration: N624JB</p>
+                                </section>
+                            </div>
+                            <hr>
+                            <h4>Logged on 2/11/2024 by Admin</h4>
+                        </section>
+                        <section class="one" id="result">
+                            <div class="columns">
+                                <section class="one" id="resimg">
+                                    <img src="./images/446ua.jpeg">
+                                </section>
+                                <section class="one" id="restxt">
+                                    <p>Airline: United Airlines</p>
+                                    <p>Aircraft: Airbus A320-200</p>
+                                    <p>Alliance: Star Alliance</p>
+                                    <p>Registration: N446UA</p>
+                                </section>
+                            </div>
+                            <hr>
+                            <h4>Logged on 2/11/2024 by Admin</h4>
+                        </section>
+                    </div>
+                </div>
+            </main>
+
+        </div>
+    <script src="script.js"></script>
+    </body>
+</html>
