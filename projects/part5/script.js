@@ -15,7 +15,7 @@ const togNav = () => {
 };
 
 const getPlanes = async() => {
-  const url = "https://ty-howard.github.io/projects/part5/planes.json";
+  const url = "planes.json";
 
   try {
     const response = await fetch(url);
@@ -71,6 +71,11 @@ const getPlaneSection = (plane) => {
   const reg = document.createElement("p");
   reg.innerHTML = "Registration: " + plane.registration;
   txtSection.append(reg);
+
+  const flights = document.createElement("p");
+  // Concatenate each flight segment into a single string separated by comma and space
+  flights.innerHTML = "Flight: " + plane.flight.join(", ");
+  result.append(flights);
 
   const hr = document.createElement("hr");
   result.append(hr);
