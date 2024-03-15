@@ -37,6 +37,7 @@ img {
 
 .columns img {
     max-width: 80%;
+    height: auto;
 }
 
 section {
@@ -90,6 +91,9 @@ a {
 
     .one {
         flex: 1;
+        flex-wrap: wrap;
+        min-width: 300px;
+        max-width: 300px;
     }
 
     .two {

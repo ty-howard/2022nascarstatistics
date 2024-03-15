@@ -29,7 +29,7 @@ const showPlanes = async() => {
   const planes = await getPlanes();
 
   planes.forEach((plane) => {
-    document.getElementById("al_resultscont").append(getPlaneSection(plane));
+    document.getElementById("resultscont").append(getPlaneSection(plane));
   });
 };
 
