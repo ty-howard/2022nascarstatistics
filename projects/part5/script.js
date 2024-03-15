@@ -15,7 +15,7 @@ const togNav = () => {
 };
 
 const getPlanes = async() => {
-  const url = "planes.json";
+  const url = "https://ty-howard.github.io/projects/part5/planes.json";
 
   try {
     const response = await fetch(url);
@@ -37,6 +37,7 @@ const getPlaneSection = (plane) => {
   const result = document.createElement("section");
   result.classList.add("one");
   result.setAttribute("id","result");
+  result.onclick = () => openModal(plane);
 
   const columns = document.createElement("div");
   columns.classList.add("columns");
@@ -72,11 +73,6 @@ const getPlaneSection = (plane) => {
   reg.innerHTML = "Registration: " + plane.registration;
   txtSection.append(reg);
 
-  const flights = document.createElement("p");
-  // Concatenate each flight segment into a single string separated by comma and space
-  flights.innerHTML = "Flight: " + plane.flight.join(", ");
-  result.append(flights);
-
   const hr = document.createElement("hr");
   result.append(hr);
 
@@ -86,6 +82,51 @@ const getPlaneSection = (plane) => {
 
   return result;
 }
+
+const openModal = (plane) => {
+  const modal = document.getElementById("myModal");
+  const modalContent = document.getElementById("modal-content");
+  
+  modalContent.innerHTML = "";
+
+  const closeBtn = document.getElementsByClassName("close")[0];
+  closeBtn.onclick = () => modal.style.display = "none";
+
+  modal.style.display = "block";
+
+  const columnsContainer = document.createElement("div");
+  columnsContainer.classList.add("columns");
+
+  const dataColumn = document.createElement("div");
+  dataColumn.classList.add("one");
+
+  const flightParagraph = document.createElement("p");
+    flightParagraph.innerHTML = "Flight Data:";
+    plane.flight.forEach(flightSegment => {
+        const flightSegmentLine = document.createElement("p");
+        flightSegmentLine.innerHTML = flightSegment;
+        flightParagraph.appendChild(flightSegmentLine);
+    });
+    dataColumn.appendChild(flightParagraph);
+
+  const date = document.createElement("p");
+  date.innerHTML = "Seen at RDU on " + plane.date + " by " + plane.user;
+  dataColumn.append(date);
+
+  const imageColumn = document.createElement("div");
+  imageColumn.classList.add("one");
+
+  const image = document.createElement("img");
+  image.src = "./images/" + plane.main_image;
+  image.style.width = "90%";
+  imageColumn.append(image);
+
+  columnsContainer.append(dataColumn);
+  columnsContainer.append(imageColumn);
+
+  modalContent.append(columnsContainer);
+}
+
 
 document.getElementById("triangle").onclick = togNav;
 showPlanes();
