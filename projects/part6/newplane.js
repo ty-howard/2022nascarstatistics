@@ -7,7 +7,7 @@ const submitNewPlane = (e) => {
     const aircraft = form.elements["aircraft"].value;
     const alliance = form.elements["alliance"].value;
     const reg = form.elements["reg"].value;
-    console.log("Plane" + reg + "logged with date" + date);
+    console.log("Plane " + reg + " logged with date " + date + ", type " + aircraft + ", alliance " + alliance + ", and airline " + airline);
     /*Flight Data*/
     const orig = form.elements["orig"].value;
     const dest = form.elements["dest"].value;
