@@ -1,0 +1,79 @@
+<form id="new-plane">
+    <p>
+      <label for="cal-sel">Date:</label>
+      <input type="date" id="cal-sel" required>
+    </p>
+    <p>
+      <label for="birth-date">Birth Date:</label>
+      <input type="date" id="birth-date" required />
+    </p>
+    Size
+
+    <p>
+      <input type="radio" name="size" value="small" required />
+      <label for="small" class="inline">Small</label>
+    </p>
+    <p>
+      <input type="radio" name="size" value="medium" />
+      <label for="medium" class="inline">Meduim</label>
+    </p>
+    <p>
+      <input type="radio" name="size" value="large" />
+      <label for="large" class="inline">Large</label>
+    </p>
+    <p>
+      <label for="demeanor">Demeanor</label>
+      <select name="demeanor">
+        <option value="playful">Playful</option>
+        <option value="cuddly">Cuddly</option>
+        <option value="agressive">Agressive</option>
+        <option value="violent">Violet</option>
+      </select>
+    </p>
+
+    <p>
+      <input type="checkbox" required name="terms" /><label
+        for="terms"
+        class="inline"
+        >I agree to the terms.</label
+      >
+    </p>
+
+    <p>
+      <button type="submit">Submit</button>
+    </p>
+  </form>
+
+  <form id="new-plane">
+    <h2>Add a Flight</h2>
+    <h3 class="add">Date</h3>
+    <input type="date" id="cal-sel" required>
+    <h3 class="add">Airline</h3>
+    <input class="loginbar" placeholder='Enter Airline' required>
+    <h3 class="add">Aircraft</h3>
+    <input class="loginbar" placeholder='Enter Aircraft' required>
+    <h3 class="add">Alliance</h3>
+    <select name="alliance">
+        <option value="star">Star Alliance</option>
+        <option value="oneworld">OneWorld</option>
+        <option value="skyteam">SkyTeam</option>
+        <option value="none">Not Affiliated</option>
+      </select>
+    <h3 class="add">Registration</h3>
+    <input class="loginbar" placeholder='Enter Registration' required>
+    <hr>
+    <h3>Flight Data</h3>
+    <h3 class="add">Origin</h3>
+    <input class="loginbar" placeholder='City, ST (CODE)' required>
+    <h3 class="add">Destination</h3>
+    <input class="loginbar" placeholder='City, ST (CODE)' required>    
+    <h3 class="add">Duration</h3>
+    <label for="hrs">Hours:</label>
+    <input type="number" id="hrs" name="hrs" min="0" max="23">
+    <label for='mins'>Minutes:</label>
+    <input type="number" id="mins" name="mins" min="0" max="59">
+    <hr>
+    <h3 class="add">Image</h3>
+    <input type="file" class="login-txt" accept=".jpg, .png, .jpeg" required>
+    <button type="submit" class="login-btn">SUBMIT</button>  
+  </form>
