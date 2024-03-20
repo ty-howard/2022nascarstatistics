@@ -167,15 +167,15 @@ input::file-selector-button:hover {
 
 #map-container {
     width: 70%;
-    height: 400px;
+    height: auto;
     display: block;
     margin: auto;
 }
 
 #map-container iframe {
     width: 100%;
-    height: 100%;
-    border: 3px solid darkslategrey;
+    height: 300px;
+    border: 4px solid darkslategrey;
     border-radius: 10px;
 }
 
@@ -339,7 +339,6 @@ input[type='file'] {
     #content {
         background: white;
         width: 80%;
-        height: 1550px;
         padding: 5px;
         margin: auto;
         border-radius: 10px;
@@ -378,4 +377,5 @@ input[type='file'] {
     #nav-items span:last-child::after {
         content: ""; /* Remove pipe symbol after the last item */
     }
+
 }
