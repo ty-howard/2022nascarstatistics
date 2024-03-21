@@ -1,28 +1,41 @@
-const getCrafts = async() => {
-    const url = "https://portiaportia.github.io/json/crafts.json";
+document.addEventListener("DOMContentLoaded", function () {
+    const gallery = document.getElementById('gallery');
+    const modal = document.getElementById('myModal');
+    const modalContent = document.querySelector('.modal-content');
+    const modalImage = document.getElementById('modal-image');
+    const modalDetails = document.getElementById('modal-details');
 
-    try {
-        const response = await fetch(url);
-        return response.json();
-    } catch(error){
-        alert("Error");
-    }
-};
+    // Fetch crafts data from the server
+    fetch('/api/crafts')
+        .then(response => response.json())
+        .then(data => {
+            // Generate HTML for each craft
+            data.forEach(craft => {
+                const craftElement = document.createElement('div');
+                craftElement.classList.add('craft');
+                craftElement.innerHTML = `<img src="${craft.image}" alt="${craft.name}">`;
 
-const showCrafts = async () => {
-    const crafts = await getCrafts();
+                // Add click event listener to show modal when image is clicked
+                craftElement.querySelector('img').addEventListener('click', () => {
+                    modalImage.src = craft.image;
+                    modalDetails.innerHTML = `<h2>${craft.name}</h2><p>${craft.description}</p>`;
+                    modal.style.display = 'block';
+                });
 
-    // Clear existing content in gallery
-    const gallery = document.getElementById("gallery");
-    gallery.innerHTML = '';
+                gallery.appendChild(craftElement);
+            });
+        })
+        .catch(error => console.error('Error fetching crafts:', error));
 
-    // Loop through crafts and create img elements for images
-    crafts.forEach((craft) => {
-        const img = document.createElement("img");
-        img.src = "./images/" + craft.image; // Assuming craft object has a property image with the image file name
-        img.alt = "Craft Image"; // You can set an appropriate alt text here for accessibility
-        gallery.appendChild(img);
+    // Close the modal when the close button (x) is clicked
+    document.querySelector('.close').addEventListener('click', () => {
+        modal.style.display = 'none';
     });
-};
 
-showCrafts();
+    // Close the modal when clicking outside of it
+    window.addEventListener('click', (event) => {
+        if (event.target === modal) {
+            modal.style.display = 'none';
+        }
+    });
+});
